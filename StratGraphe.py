@@ -68,4 +68,4 @@ def play(humain):
 
 # play(1) for you to start,
 # play(2) for the computer to start.
-play(1)
+#play(1)
