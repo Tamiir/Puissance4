@@ -5,6 +5,7 @@ def calculer_strategie():
     dico = dict()
     compteur = 0
     def aux(etat):
+        nonlocal compteur
         if etat not in dico:
             if est_terminal(etat):
                 dico[etat] = (est_gagnant(etat),None)
