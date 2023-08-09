@@ -26,7 +26,7 @@ def calculer_strategie():
     aux(init()) # on commence à l'état initial
     return dico
 
-def jouer(humain):
+def play(humain):
     d = calculer_strategie()
     etat = init()
     display(etat)
@@ -34,7 +34,7 @@ def jouer(humain):
         joueur = etat[0]
         grille = etat[1]
         if joueur == humain:
-            print("À vous de jouer.")
+            print("Your turn.")
             while True:
                 s = input("> ")
                 if s not in ['0','1','2','3','4','5','6','7']:
@@ -58,3 +58,7 @@ def jouer(humain):
         print("Match nul")
     else:
         print(f"Le vainqueur est {vainqueur}.")
+
+# play(1) for you to start,
+# play(2) for the computer to start.
+play(1)
