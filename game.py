@@ -21,14 +21,14 @@ def est_gagnant(etat):
     for ligne in range(6):
         for j in range(3):
             if grille[ligne][j] == grille[ligne][j+1] == grille[ligne][j+2] == grille[ligne][j+3] and grille[ligne][j] != 0:
-                print('victoire en ligne joueur ',grille[ligne][j])
+                #print('victoire en ligne joueur ',grille[ligne][j])
                 return grille[ligne][j]
             
     #victoire en colonne
     for colonne in range(7):
         for j in range(3):
             if grille[j][colonne] == grille[j+1][colonne] == grille[j+2][colonne] == grille[j+3][colonne] and grille[j][colonne] != 0:
-                print('victoire en colonne joueur ',grille[j][colonne])
+                #print('victoire en colonne joueur ',grille[j][colonne])
                 return grille[j][colonne]
             
     #victoire en diagonal
@@ -54,7 +54,6 @@ def jouer_coup(etat,coup):
             if grille[5-i][coup] == 0:
                 return 5-i
     ligne = ligne_coup(grille,coup)
-    print('LIGNE ',ligne)
     nv_grille = tuple( 
         (
         tuple ((joueur if i == ligne and j == coup else grille[i][j] for j in range(7)))
