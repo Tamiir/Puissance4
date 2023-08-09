@@ -75,6 +75,7 @@ def display(etat):
             print(remp[grille[i][j]], " ", sep = "", end = "")
         print()
     print()
+    print(f'Player {etat[0]} to play')
 
 def partie_combi(combinaison):
     partie = init()
