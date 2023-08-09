@@ -1,5 +1,4 @@
 from game import *
-from numpy import save,load
 
 def calculer_strategie():
     dico = dict()
