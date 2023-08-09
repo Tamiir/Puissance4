@@ -62,3 +62,14 @@ def jouer_coup(etat,coup):
         )
     )
     return (nv_joueur, nv_grille)
+
+def display(etat):
+    grille = etat[1]
+    remp = ['.','X','O']
+    print("  0 1 2 3 4 5 6")
+    for i in range(6):
+        print(i, " ", sep = "", end = "")
+        for j in range(7):
+            print(remp[grille[i][j]], " ", sep = "", end = "")
+        print()
+    print()
