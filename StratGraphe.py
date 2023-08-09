@@ -23,7 +23,15 @@ def calculer_strategie():
                 dico[etat] = (0, coups_prochains[0])
             else:
                 dico[etat] = (3 - etat[0], coups_prochains[3 - etat[0]])
-    aux(init()) # on commence à l'état initial
+    #aux(init()) # on commence à l'état initial
+    aux(
+        (1,((0, 0, 0, 0, 0, 3,  3),
+            (0, 0, 0, 0, 0, 3,  3),
+            (0, 0, 0, 0, 0, 3,  3),
+            (0, 0, 0, 0, 0, 3,  3),
+            (3, 3, 3, 3, 3, 3,  3),
+            (3, 3, 3, 3, 3, 3,  3),))
+    )
     return dico
 
 def play(humain):
