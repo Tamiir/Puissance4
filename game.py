@@ -4,7 +4,7 @@ def init():
                 (0,0,0,0,0,0,0),
                 (0,0,0,0,0,0,0),
                 (0,0,0,0,0,0,0),
-                (0,0,0,0,0,0,0),))
+                (0,0,0,0,0,0,0),), 0)
 
 def coups_possibles(etat):
     grille = etat[1]
@@ -50,7 +50,7 @@ def est_terminal(etat):
     return est_gagnant(etat) != 0 or coups_possibles(etat) == []
 
 def jouer_coup(etat,coup):
-    (joueur,grille)=etat
+    (joueur,grille,nb)=etat
     nv_joueur = 3 - joueur 
     def ligne_coup(grille,coup):
         for i in range(6):
@@ -63,7 +63,7 @@ def jouer_coup(etat,coup):
         for i in range(6)
         )
     )
-    return (nv_joueur, nv_grille)
+    return (nv_joueur, nv_grille,nb+1)
 
 def display(etat):
     grille = etat[1]
