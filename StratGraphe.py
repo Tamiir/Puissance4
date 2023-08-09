@@ -1,9 +1,6 @@
 from game import *
 from numpy import save,load
 
-def est_terminal(etat):
-    return est_gagnant(etat) != 0 or coups_possibles(etat) == []
-
 def calculer_strategie():
     dico = dict()
     def aux(etat):

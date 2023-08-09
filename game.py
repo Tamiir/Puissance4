@@ -46,6 +46,9 @@ def est_gagnant(etat):
     #pas de victoire        
     return 0
 
+def est_terminal(etat):
+    return est_gagnant(etat) != 0 or coups_possibles(etat) == []
+
 def jouer_coup(etat,coup):
     (joueur,grille)=etat
     nv_joueur = 3 - joueur 
