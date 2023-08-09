@@ -32,10 +32,8 @@ def calculer_strategie():
     aux(init()) # on commence à l'état initial
     return dico
 
-save(calculer_strategie(),'strategy.npy')
-
 def play(humain):
-    d = load('strategy.npy',allow_pickle=True)
+    d = calculer_strategie()
     etat = init()
     display(etat)
     while coups_possibles(etat) != [] and est_gagnant(etat) == 0:
