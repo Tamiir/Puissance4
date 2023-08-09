@@ -3,6 +3,7 @@ from numpy import save,load
 
 def calculer_strategie():
     dico = dict()
+    compteur = 0
     def aux(etat):
         if etat not in dico:
             if est_terminal(etat):
@@ -17,10 +18,16 @@ def calculer_strategie():
                 coups_prochains[dico[etat_suivant][0]] = coup
             if categories[etat[0]] > 0:
                 dico[etat] = (etat[0], coups_prochains[etat[0]])
+                compteur += 1
+                print(compteur)
             elif categories[0] > 0:
                 dico[etat] = (0, coups_prochains[0])
+                compteur += 1
+                print(compteur)
             else:
                 dico[etat] = (3 - etat[0], coups_prochains[3 - etat[0]])
+                compteur += 1
+                print(compteur)
     aux(init()) # on commence à l'état initial
     return dico
 
