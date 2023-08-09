@@ -75,3 +75,11 @@ def display(etat):
             print(remp[grille[i][j]], " ", sep = "", end = "")
         print()
     print()
+
+def partie_combi(combinaison):
+    partie = init()
+    for coup_str in combinaison:
+        coup = int(coup_str)-1
+        nv_partie = jouer_coup(partie,coup)
+        partie = nv_partie
+    return partie
