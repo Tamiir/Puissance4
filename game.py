@@ -7,12 +7,12 @@ def init():
                 (0,0,0,0,0,0,0),), (0,0) )
 
 def small_init():
-    return (1, ((3,3,0,0,0,0,0),
-                (3,3,0,0,0,0,0),
-                (3,3,0,0,0,0,0),
-                (3,3,0,0,0,0,0),
+    return (1, ((3,3,3,0,0,0,0),
+                (3,3,3,0,0,0,0),
+                (3,3,3,0,0,0,0),
+                (3,3,3,0,0,0,0),
                 (3,3,3,3,3,3,3),
-                (3,3,3,3,3,3,3),), (11,11) )
+                (3,3,3,3,3,3,3),), (13,13) )
 
 def coups_possibles(etat):
     grille = etat[1]
@@ -27,7 +27,7 @@ def est_gagnant(etat):
 
     #victoire en ligne
     for ligne in range(6):
-        for j in range(3):
+        for j in range(4):
             if grille[ligne][j] == grille[ligne][j+1] == grille[ligne][j+2] == grille[ligne][j+3] and (grille[ligne][j] == 1 or grille[ligne][j] == 2):
                 #print('victoire en ligne joueur ',grille[ligne][j])
                 return grille[ligne][j]
